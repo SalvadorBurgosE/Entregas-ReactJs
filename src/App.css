@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.ShoppingCartOutlinedIcon {
+  color: white;
+}
+
+.main {
+  padding-left: 80px;
+}

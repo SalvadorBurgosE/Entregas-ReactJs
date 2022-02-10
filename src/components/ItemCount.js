@@ -17,16 +17,21 @@ const ItemCount = (props) => {
         }   
     }
 
+    // const onAdd = () => {
+    //     alert(`Agregaste ${count} item/s al carrito`)
+    //     setCount(props.initial)
+    // }
+
     return (
         <>
-        <section>
+        <section className="d-flex d-row">
             <div className="d-flex d-row">
               <button className="rounded-3 mx-3 btn-primary" onClick={increase}>+</button>
               <p>{count}</p>
               <button className="rounded-3 mx-3 btn-primary" onClick={decrease}>-</button>  
             </div>
             <div>
-
+                <button className="rounded-3 mx-3 btn-primary" onClick={props.onAdd}>Agregar al carrito</button>
             </div>
         </section>
         </>

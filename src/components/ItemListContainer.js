@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemCount from './ItemCount';
 
 const onAdd = (count) => {
-    alert("Agregaste:", count)
+    alert(`Agregaste ${count} item/s al carrito`)
 }
 
 const ItemListContainer = (props) => {

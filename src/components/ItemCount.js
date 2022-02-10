@@ -31,7 +31,7 @@ const ItemCount = (props) => {
               <button className="rounded-3 mx-3 btn-primary" onClick={decrease}>-</button>  
             </div>
             <div>
-                <button className="rounded-3 mx-3 btn-primary" onClick={props.onAdd}>Agregar al carrito</button>
+                <button className="rounded-3 mx-3 btn-primary" onClick={()=>props.onAdd(count)}>Agregar al carrito</button>
             </div>
         </section>
         </>

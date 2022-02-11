@@ -10,8 +10,7 @@ function App() {
         <NavBar/>
       </header>
       <main className='main'>
-        <ItemListContainer text="Item List Container"/>
-        {/* <ItemCount maxStock={10} initial={0}/> */}
+        <ItemListContainer/>
       </main>
     </>
   );

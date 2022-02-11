@@ -24,7 +24,7 @@ const ItemCount = (props) => {
 
     return (
         <>
-        <section className="d-flex d-row">
+        <div className="d-flex d-row">
             <div className="d-flex d-row">
               <button className="rounded-3 mx-3 btn-primary" onClick={increase}>+</button>
               <p>{count}</p>
@@ -33,7 +33,7 @@ const ItemCount = (props) => {
             <div>
                 <button className="rounded-3 mx-3 btn-primary" onClick={()=>props.onAdd(count)}>Agregar al carrito</button>
             </div>
-        </section>
+        </div>
         </>
     );
 }

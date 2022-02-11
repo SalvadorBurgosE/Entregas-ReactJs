@@ -1,15 +1,25 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ItemCount from './ItemCount';
+import { useState } from 'react';
+import ItemList from './ItemList';
 
-const onAdd = (count) => {
-    alert(`Agregaste ${count} item/s al carrito`)
-}
+const ItemListContainer = () => {
+    // const [product, setProduct] = useState([]);
 
-const ItemListContainer = (props) => {
+    // const customFetch = (timeout, data) => {
+    //     return new Promise((resolve, reject)) => {
+    //         if (is_stock) {
+    //             setTimeout(() => {
+    //                 resolve(task)
+    //             }, timeout);
+    //         } else {
+    //             reject("Error")
+    //         }
+    //     })
+    // }
+
     return (
         <>
-        <h1 className='px-5'> {props.text} </h1>
-        <ItemCount maxStock={10} initial={0} onAdd={onAdd}/>
+        <ItemList/>
         </>
     );
 }

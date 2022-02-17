@@ -35,10 +35,10 @@ export const data = [
     }
 ];
 
-const ItemList = () => {
+const ItemList = ({product}) => {
     return (
         <>
-            {data.map(item =>
+            {product.map(item =>
                 <Item 
                     key={item.id}
                     name={item.name}

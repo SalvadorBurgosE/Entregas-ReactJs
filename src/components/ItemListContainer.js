@@ -1,25 +1,21 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useState } from 'react';
-import ItemList from './ItemList';
+import { useEffect, useState } from 'react';
+import customFetch from './Functions';
+import ItemList, { data } from './ItemList';
 
 const ItemListContainer = () => {
-    // const [product, setProduct] = useState([]);
+    const [product, setProduct] = useState([]);
 
-    // const customFetch = (timeout, data) => {
-    //     return new Promise((resolve, reject)) => {
-    //         if (is_stock) {
-    //             setTimeout(() => {
-    //                 resolve(task)
-    //             }, timeout);
-    //         } else {
-    //             reject("Error")
-    //         }
-    //     })
-    // }
+    useEffect(() => {
+        customFetch(3000, data)
+        .then((resolve) => setProduct(resolve))
+        .catch((error) => console.log(error))
+    }, [])
+    
 
     return (
         <>
-        <ItemList/>
+        <ItemList product={product}/>
         </>
     );
 }
